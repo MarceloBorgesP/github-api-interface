@@ -1,0 +1,65 @@
+<div class='container'>
+  <div class='panel panel-default'>
+    <div class='panel-heading'>
+      <div class="row">
+        <h4 class="col-md-6">{{model.title}}</h4>
+        <div style="width: 100px; float: right">
+          {{#if model.locked}}
+            <button {{action 'unlock'}} class="btn btn-success">
+              Unlock
+              <span class="glyphicon glyphicon-lock" aria-hidden="true"></span>
+            </button>
+          {{else}}
+            <button {{action 'lock'}} class="btn btn-danger">
+              Lock
+              <span class="glyphicon glyphicon-lock" aria-hidden="true"></span>
+            </button>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+    <div class="panel-body">
+      <form class="form-horizontal">
+        <fieldset>
+
+          <div class="form-group">
+            <label class="col-md-2 control-label" for="title">Title</label>  
+            <div class="col-md-9">
+              {{input id="title" value=model.title class="form-control input-md"}}
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-md-2 control-label" for="body">Description</label>
+            <div class="col-md-9">                     
+              {{textarea id="body" value=model.body cols="80" rows="6" class="form-control"}}
+            </div>
+          </div>
+          <div class="well well-md">
+            <div class="form-group">
+              <label class="col-md-3 control-label" for="identification">GitHub Account</label>  
+              <div class="col-md-6">
+                {{input id="identification" value=identification class="form-control input-md"}}
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-md-3 control-label" for="password">Password</label>  
+              <div class="col-md-6">
+                {{input id="password" value=password type="password" class="form-control input-md"}}
+              </div>
+            </div>
+          </div>
+
+
+          <div class="form-group">
+            <div class="col-md-2 col-md-offset-10">
+              <button {{action "submit" model}} class="btn btn-primary">Save</button>
+            </div>
+          </div>
+
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</div>

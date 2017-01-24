@@ -1,0 +1,14 @@
+<nav class='navbar navbar-default'>
+  <div class='container-fluid'>
+    <div class='navbar-header'>
+      {{#link-to 'issues.index' class='navbar-brand'}}
+        <span>Issues Manager</span>
+      {{/link-to}}
+    </div>
+    <div class='collapse navbar-collapse' id='bs-example-navbar-collapse-1'>
+      {{issues-header refresh="refresh"}}
+    </div>
+  </div>
+</nav>
+
+{{outlet}}

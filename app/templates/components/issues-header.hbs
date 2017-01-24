@@ -1,0 +1,12 @@
+<form class='navbar-form navbar-right'>
+  <div class='form-group'>
+    <label class="control-label">Owner</label> 
+    {{input id='owner' class='form-control' value=owner}}
+  </div>
+  <div class='form-group'>
+    <label class="control-label">Repository</label> 
+    {{input id='repo' class='form-control' value=repo}}
+  </div>
+  <button type='submit' {{action 'findRepo'}} class='btn btn-default'>Change repository</button>
+</form>
+

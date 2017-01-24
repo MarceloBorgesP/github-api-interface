@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <div class="row">
+        <h4 class="col-md-7">{{model.title}}</h4>
+        <div style="width: 100px; float: right">
+            {{link-to 'Edit' 'issues.edit' model.number class='btn btn-primary'}}
+        </div>
+      </div>
+    </div>
+    <div class="panel-body">
+      <p>{{model.body}}</p>
+    </div>
+  </div>
+</div>

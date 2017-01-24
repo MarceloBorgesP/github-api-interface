@@ -14,11 +14,12 @@ module.exports = function(environment) {
     },
 
     APP: {
+      API_HOST: 'https://api.github.com'
       // Here you can pass flags/options to your application instance
       // when it is created
     }
   };
-
+  
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
